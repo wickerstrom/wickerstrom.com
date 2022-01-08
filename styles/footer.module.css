@@ -1,0 +1,26 @@
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #EAEAEA;
+    border-top: solid 1px black;
+}
+
+.footerIconsWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerIcon {
+    padding: 1rem;
+    color: black;
+    transition: 0.3s;
+}
+
+
+.footerIcon :hover {
+    color: grey;
+}
