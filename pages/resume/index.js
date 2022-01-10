@@ -58,7 +58,7 @@ function Resume(props) {
                     </div>
                 ))}
             </div>
-            <h1>Skills!</h1>
+            <h1>Skills !!!</h1>
             <div>
                 {skills && skills.length > 0 && skills.map(skill => (
                     <div key={skill.sys.id}>
