@@ -9,21 +9,28 @@ function MobileDrawer(props) {
     const [isActive, setIsActive] = useState(false);
 
     return <div className={styles.mobileDrawerWrapper}>
-        {!isActive && <FontAwesomeIcon icon={faBars} size={'2x'} onClick={() => setIsActive(!isActive)} />}
+        {!isActive &&
+            <div className={styles.mobileDrawerIcon}>
+                <FontAwesomeIcon icon={faBars} size={'2x'} onClick={() => setIsActive(!isActive)} />
+            </div>}
         {isActive &&
             <div className={styles.activeMobileWrapper}>
-                <h1 className={styles.cross} onClick={() => setIsActive(!isActive)}>X</h1>
-                <ul>
-                    {navbarConfig.map((navBarItem, index) => (
-                        <li key={index}>
-                            <NavLink  onClick={() => setIsActive(!isActive)}  href={navBarItem.link}>
-                                <a>
-                                    {navBarItem.label}
-                                </a>
-                            </NavLink>
-                        </li>
-                    ))}
-                </ul>
+                <div className={styles.mobileDrawerIcon}>
+                    <FontAwesomeIcon icon={faBars} size={'2x'} onClick={() => setIsActive(!isActive)} />
+                </div>
+                <div className={styles.mobileNavLinks}>
+                    <ul>
+                        {navbarConfig.map((navBarItem, index) => (
+                            <li key={index}>
+                                <NavLink onClick={() => setIsActive(!isActive)} href={navBarItem.link}>
+                                    <a>
+                                        {navBarItem.label}
+                                    </a>
+                                </NavLink>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
             </div>}
     </div>
 }
