@@ -74,8 +74,6 @@ function Resume(props) {
                     </div>
                 ))}
             </div>
-
-            <a target="_blank" href="https://www.wickerstrom.com/cv.pdf"><h3>Download my resume as PDF</h3></a>
         </Layout>)
 }
 

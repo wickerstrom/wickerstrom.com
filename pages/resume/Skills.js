@@ -1,8 +1,8 @@
 function Skills({ skills }) {
-    const { title } = skills.fields;
+    const { title } = skills?.fields || {};
 
     return <div>
-        <p>{title}</p>
+        <p>{title ? title : null}</p>
     </div>
 }
 

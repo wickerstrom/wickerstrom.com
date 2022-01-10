@@ -16,11 +16,12 @@ export async function getServerSideProps(context) {
 
 export default function Project({ project }) {
 
-  const { title, tagLine, description } = project.fields;
+  const { title, tagLine, description, githubUrl } = project.fields;
 
-  return <Layout><h3>Title: {title}</h3>
+  return <Layout><h3>{title}</h3>
     <p>{tagLine}</p>
+    <a href={githubUrl}>{githubUrl}</a>
+
     <RichTextWrapper richText={description} />
-    <p>See next project. - etc</p>
   </Layout>;
 }

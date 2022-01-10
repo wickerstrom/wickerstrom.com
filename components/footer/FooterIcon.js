@@ -4,7 +4,7 @@ function FooterIcon(props) {
     const { icon, size, url } = props;
 
     return <div>
-        <a href={url} target='_blank'>
+        <a href={url}>
             <FontAwesomeIcon icon={icon} size={size} />
         </a>
     </div>

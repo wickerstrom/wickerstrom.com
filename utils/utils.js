@@ -11,4 +11,13 @@ const formatDateToMonthNameAndYear = (dateString) => {
     return null;
 }
 
-export { formatDateToMonthNameAndYear };
+const filterPageContentByPageTitle = (pageContent, pageTitle) => {
+    if (pageContent && pageTitle) {
+      return pageContent.filter(item => {
+        return item.fields.title === pageTitle;
+      });
+    } 
+    return null;
+  }
+
+export { formatDateToMonthNameAndYear, filterPageContentByPageTitle };

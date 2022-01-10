@@ -26,7 +26,7 @@ function Footer() {
   return <div className={styles.footer}>
     <div className={styles.footerIconsWrapper}>
       {footerConfig.map((footerIcon, index) => (
-        <div className={styles.footerIcon}><FooterIcon key={index} icon={footerIcon.icon} size={footerIcon.size} url={footerIcon.url} /></div>
+        <div key={index} className={styles.footerIcon}><FooterIcon key={index} icon={footerIcon.icon} size={footerIcon.size} url={footerIcon.url} /></div>
       ))}
     </div>
   </div >

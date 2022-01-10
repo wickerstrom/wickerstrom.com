@@ -16,7 +16,8 @@ export async function getStaticProps() {
 function Projects({ projects }) {
 
   return <Layout>
-    {projects.map(project => (
+    {projects.length === 0 && <div>Whoops, there are no projects here...</div>}
+    {projects && projects.length > 0 && projects.map(project => (
       <div key={project.sys.id}>
         <ProjectCard project={project} />
       </div>

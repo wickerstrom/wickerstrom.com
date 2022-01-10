@@ -2,32 +2,32 @@ import Head from 'next/head'
 import Layout from '../components/layout/Layout'
 import RichTextWrapper from '../components/common/RichTextWrapper'
 import { ContentfulClient, revalidateValue } from '../config/config'
+import { filterPageContentByPageTitle } from '../utils/utils';
 
 export async function getStaticProps() {
   const res = await ContentfulClient.getEntries({ content_type: 'pageContent' })
 
   return {
     props: {
-      landingPage: res.items,
+      content: res.items,
       revalidate: revalidateValue
     }
   }
 }
 
-export default function Home({ landingPage })  {
-
-  const { contentText } = landingPage[0].fields;
+export default function Home({ content }) {
+  const { contentText } = filterPageContentByPageTitle(content, 'LandingPage')[0].fields;
 
   return (
     <div>
       <Head>
-        <title>Wickerstrom Design & Development</title>
+        <title>Christian Wickerström</title>
         <meta name="Wickerstrom Design & Development" />
       </Head>
       <Layout>
-        <h1>Wickerstrom Design & Development</h1>
-        <RichTextWrapper richText={contentText} />
-
+        <div className="centeredContentWrapper">
+          <RichTextWrapper richText={contentText} />
+        </div>
       </Layout>
     </div>
   )

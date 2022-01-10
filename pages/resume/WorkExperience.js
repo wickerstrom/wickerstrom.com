@@ -2,7 +2,7 @@ import RichTextWrapper from "../../components/common/RichTextWrapper";
 import { formatDateToMonthNameAndYear } from '../../utils/utils';
 
 function WorkExperience({ workExperience }) {
-    const { workTitle, company, location, startDate, endDate, description } = workExperience.fields;
+    const { workTitle, company, location, startDate, endDate, description } = workExperience?.fields || {};
 
     return <div>
         <h3>{workTitle} at {company}, {location}</h3>
