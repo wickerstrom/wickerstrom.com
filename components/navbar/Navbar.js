@@ -24,6 +24,7 @@ const navbarConfig = [
     }]
 
 function Navbar() {
+    let isMobile = false;
     const [windowDimension, setWindowDimension] = useState(null);
 
     useEffect(() => {
@@ -39,7 +40,7 @@ function Navbar() {
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
-    const isMobile = windowDimension <= 640;
+    isMobile = windowDimension <= 640;
 
     return <div>
         {!isMobile ? (
