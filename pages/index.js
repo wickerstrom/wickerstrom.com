@@ -22,7 +22,7 @@ export default function Home({ content }) {
     <div>
       <Head>
         <title>Christian Wickerström</title>
-        <meta name="Wickerstrom Design & Development" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       </Head>
       <Layout>
         <div className="centeredContentWrapper">
