@@ -1,12 +1,9 @@
 .footer {
-    position: fixed;
-    right: 0;
-    left: 0;
-    bottom: 0;
     width: 100%;
     text-align: center;
-    background-color: #EAEAEA;
+    background-color: white;
     border-top: solid 1px black;
+    margin-top: auto;
 }
 
 .footerIconsWrapper {

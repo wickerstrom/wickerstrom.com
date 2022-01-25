@@ -2,9 +2,10 @@ html,
 body {
   padding: 0;
   margin: 0;
-  height: 100vh;
-  font-family: Futura, Arial, sans-serif;
-  background-color: #F2F2F2;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", 
+  Helvetica, Arial, "Lucida Grande", sans-serif;
+  background-color: white;
+  min-height: 100vh;
 }
 
 main {
@@ -14,6 +15,9 @@ main {
   -moz-animation: fadeIn 0.4s;
   -o-animation: fadeIn 0.4s;
   -ms-animation: fadeIn 0.4s;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 @keyframes fadeIn {
@@ -54,4 +58,5 @@ a :visited {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }

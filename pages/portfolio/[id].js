@@ -20,7 +20,7 @@ export default function Project({ project }) {
 
   return <Layout><h3>{title}</h3>
     <p>{tagLine}</p>
-    <a href={githubUrl}>{githubUrl}</a>
+    Github: <a href={githubUrl}>{githubUrl}</a>
 
     <RichTextWrapper richText={description} />
   </Layout>;

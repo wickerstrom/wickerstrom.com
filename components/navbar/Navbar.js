@@ -40,14 +40,14 @@ function Navbar() {
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
-    isMobile = windowDimension <= 640;
+    isMobile = windowDimension <= 600;
 
     return <div>
         {!isMobile ? (
             <div className={styles.navbar}>
                 <div>
                     <NavLink href={'/'}>
-                        <a className={styles.hoverunderlineanimation}>
+                        <a className={styles.underLine}>
                             {'Home'}
                         </a>
                     </NavLink>
@@ -55,7 +55,7 @@ function Navbar() {
                 <div>
                     {navbarConfig.map((navBarItem, index) => (
                         <NavLink key={index} href={navBarItem.link}>
-                            <a className={styles.hoverunderlineanimation}>
+                            <a className={styles.underLine}>
                                 {navBarItem.label}
                             </a>
                         </NavLink>
