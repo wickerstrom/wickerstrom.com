@@ -2,47 +2,59 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", 
-  Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
   background-color: white;
-  min-height: 100vh;
+}
+
+a {
+  text-underline-offset: 3px;
+  transition: 0.2s;
+}
+
+a:hover {
+  color: grey;
+}
+
+p {
+  line-height: 1.6rem;
 }
 
 main {
   padding: 2rem 2rem 5rem 2rem;
-  animation: fadeIn 0.4s;
-  -webkit-animation: fadeIn 0.4s;
-  -moz-animation: fadeIn 0.4s;
-  -o-animation: fadeIn 0.4s;
-  -ms-animation: fadeIn 0.4s;
-  min-height: 100vh;
+  animation: fadeIn 0.7s;
+  -webkit-animation: fadeIn 0.7s;
+  -moz-animation: fadeIn 0.7s;
+  -o-animation: fadeIn 0.7s;
+  -ms-animation: fadeIn 0.7s;
+  min-height: 75vh;
   display: flex;
   flex-direction: column;
 }
 
 @keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  from {transform: translateY(35px); opacity: 0;}
+  to { transform: translateY(0); opacity: 1;}
 }
 
 @-moz-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  from {transform: translateY(35px); opacity: 0;}
+  to { transform: translateY(0); opacity: 1;}
 }
 
 @-webkit-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  from {transform: translateY(35px); opacity: 0;}
+  to { transform: translateY(0); opacity: 1;}
 }
 
 @-o-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  from {transform: translateY(35px); opacity: 0;}
+  to { transform: translateY(0); opacity: 1;}
 }
 
 @-ms-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  from {transform: translateY(35px); opacity: 0;}
+  to { transform: translateY(0); opacity: 1;}
 }
 
 a {

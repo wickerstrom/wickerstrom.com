@@ -4,7 +4,9 @@ function Skills({ skills }) {
     const { title } = skills?.fields || {};
 
     return <div className={styles.skill}>
-        <p>{title ? title : null}</p>
+        <ul>
+            <li>{title ? title : null}</li>
+        </ul>
     </div>
 }
 

@@ -23,13 +23,22 @@ const footerConfig = [{
 ]
 
 function Footer() {
+  let d = new Date();
+  let currentYear = d.getFullYear();
+
+
   return <div className={styles.footer}>
+
     <div className={styles.footerIconsWrapper}>
       {footerConfig.map((footerIcon, index) => (
         <div key={index} className={styles.footerIcon}><FooterIcon key={index} icon={footerIcon.icon} size={footerIcon.size} url={footerIcon.url} /></div>
       ))}
     </div>
-  </div >
+
+    <div className={styles.copyright}>
+      <small>&copy; Copyright Christian Wickerström {currentYear}, All right reserved.</small>
+    </div>
+  </div>
 }
 
 export default Footer

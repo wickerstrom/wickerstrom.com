@@ -17,9 +17,17 @@
     transition: 0.25s;
 }
 
+.active {
+    text-decoration: underline;
+}
+
+a.home {
+    cursor:pointer;
+}
 
 a.underLine {
     position: relative;
+    cursor:pointer;
 }
 
 a.underLine:before {

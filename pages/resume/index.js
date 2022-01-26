@@ -43,38 +43,40 @@ function Resume(props) {
 
     return (
         <Layout>
-            <div>
-                <h1>Experience</h1>
-                {workExperience && workExperience.length > 0 && sortItemsByMostRecent(workExperience).map(workExperience => (
-                    <div key={workExperience.sys.id}>
-                        <WorkExperience workExperience={workExperience} />
-                    </div>
-                ))}
-            </div>
-            <div>
-                <h1>Education</h1>
-                {education && education.length > 0 && sortItemsByMostRecent(education).map(education => (
-                    <div key={education.sys.id}>
-                        <Education education={education} />
-                    </div>
-                ))}
-            </div>
-            <h1>Skills</h1>
+            <div className={styles.resumeWrapper}>
+                <div>
+                    <h1>Experience</h1>
+                    {workExperience && workExperience.length > 0 && sortItemsByMostRecent(workExperience).map(workExperience => (
+                        <div key={workExperience.sys.id}>
+                            <WorkExperience workExperience={workExperience} />
+                        </div>
+                    ))}
+                </div>
+                <div>
+                    <h1>Education</h1>
+                    {education && education.length > 0 && sortItemsByMostRecent(education).map(education => (
+                        <div key={education.sys.id}>
+                            <Education education={education} />
+                        </div>
+                    ))}
+                </div>
+                <h1>Skills</h1>
 
-            <div className={styles.skillsWrapper}>
-                {skills && skills.length > 0 && skills.map(skill => (
-                    <div key={skill.sys.id}>
-                        <Skills skills={skill} />
-                    </div>
-                ))}
-            </div>
-            <div>
-                <h1>Certificates</h1>
-                {certificates && certificates.length > 0 && sortItemsByMostRecent(certificates).map(certificate => (
-                    <div key={certificate.sys.id}>
-                        <Certificates certificate={certificate} />
-                    </div>
-                ))}
+                <div className={styles.skillsWrapper}>
+                    {skills && skills.length > 0 && skills.map(skill => (
+                        <div key={skill.sys.id}>
+                            <Skills skills={skill} />
+                        </div>
+                    ))}
+                </div>
+                <div>
+                    <h1>Certificates</h1>
+                    {certificates && certificates.length > 0 && sortItemsByMostRecent(certificates).map(certificate => (
+                        <div key={certificate.sys.id}>
+                            <Certificates certificate={certificate} />
+                        </div>
+                    ))}
+                </div>
             </div>
         </Layout>)
 }

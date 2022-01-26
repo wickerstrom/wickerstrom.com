@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: auto;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
 .skill {
@@ -10,5 +10,30 @@
 }
 
 .experience, .education {
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem;
+}
+
+@media (min-width: 1500px) {
+    .resumeWrapper {
+        margin: 0rem 30rem 0rem 30rem;
+    }
+}
+
+@media (min-width: 1000px) {
+    .resumeWrapper {
+        margin: 0rem 10rem 0rem 10rem;
+    }
+}
+
+@media (max-width: 999px) {
+    .resumeWrapper {
+        margin: 0rem 5rem 0rem 5rem;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .resumeWrapper {
+        margin: 0rem 2rem 0rem 2rem;
+    }
 }

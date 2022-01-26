@@ -17,6 +17,10 @@
     transition: 0.3s;
 }
 
+.copyright {
+    padding: 0.1rem 1rem 1rem 1rem;
+}
+
 
 .footerIcon :hover {
     color: grey;

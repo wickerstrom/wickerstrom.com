@@ -3,6 +3,7 @@ import NavLink from 'next/link';
 import styles from '../../styles/navbar.module.css'
 import React, { useEffect, useState } from "react";
 import MobileDrawer from './MobileDrawer';
+import ActiveLink from './ActiveLink'
 
 const navbarConfig = [
     {
@@ -47,18 +48,25 @@ function Navbar() {
             <div className={styles.navbar}>
                 <div>
                     <NavLink href={'/'}>
-                        <a className={styles.underLine}>
-                            {'Home'}
-                        </a>
+                        <h4>
+                            <a className={styles.home}>
+                                {'CHRISTIAN WICKERSTRÖM'}
+                            </a>
+                        </h4>
                     </NavLink>
                 </div>
                 <div>
+                    <style jsx>{`
+                    .active {
+                        font-weight: bold;
+                    }
+                    `}</style>
                     {navbarConfig.map((navBarItem, index) => (
-                        <NavLink key={index} href={navBarItem.link}>
+                        <ActiveLink activeClassName={"active"} key={index} href={navBarItem.link}>
                             <a className={styles.underLine}>
                                 {navBarItem.label}
                             </a>
-                        </NavLink>
+                        </ActiveLink>
                     ))}
                 </div>
             </div>
