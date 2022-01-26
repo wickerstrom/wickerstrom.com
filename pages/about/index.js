@@ -3,6 +3,7 @@ import { ContentfulClient, revalidateValue } from '../../config/config'
 import RichTextWrapper from '../../components/common/RichTextWrapper'
 import { filterPageContentByPageTitle } from '../../utils/utils';
 import Acknowledgement from './Acknowledgement';
+import styles from '../../styles/about.module.css'
 
 export async function getStaticProps() {
 
@@ -21,25 +22,6 @@ export async function getStaticProps() {
     }
   }
 }
-/*
-export async function getStaticProps() {
-  const [workExperience, education, skills, certificates] = await Promise.all([
-    ContentfulClient.getEntries({ content_type: 'workExperience' }),
-    ContentfulClient.getEntries({ content_type: 'education' }),
-    ContentfulClient.getEntries({ content_type: 'skills' }),
-    ContentfulClient.getEntries({ content_type: 'certificates' })
-  ]);
-
-  return {
-    props: {
-      workExperience: workExperience.items,
-      education: education.items,
-      skills: skills.items,
-      certificates: certificates.items,
-      revalidate: revalidateValue
-    }
-  }
-}*/
 
 function About({ content, acknowledgements }) {
   const { contentText } = filterPageContentByPageTitle(content, 'About')[0].fields;
@@ -47,7 +29,7 @@ function About({ content, acknowledgements }) {
   return <Layout><div className="centeredContentWrapper">
     <RichTextWrapper richText={contentText} />
   </div>
-    <div>
+    <div className={styles.acknowledgementsWrapper}>
       <h2>Acknowledgements</h2>
       {acknowledgements && acknowledgements.length > 0 && acknowledgements.map(acknowledgement => (
         <div key={acknowledgement.sys.id}>

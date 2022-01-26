@@ -18,15 +18,11 @@ function Projects({ projects }) {
 
   return <Layout>
     {projects.length === 0 && <div>Whoops, there are no projects here...</div>}
-    <div >
       {projects && projects.length > 0 && projects.map(project => (
         <div className={styles.projectCardWrapper} key={project.sys.id}>
           <ProjectCard project={project} />
-
-
         </div>
       ))}
-    </div>
   </Layout>
 }
 

@@ -17,9 +17,6 @@
     transition: 0.25s;
 }
 
-.navbar a:hover {
-    color: grey;
-}
 
 a.underLine {
     position: relative;

@@ -18,9 +18,9 @@ export default function Project({ project }) {
 
   const { title, tagLine, description, githubUrl } = project.fields;
 
-  return <Layout><h3>{title}</h3>
-    <p>{tagLine}</p>
-    Github: <a href={githubUrl}>{githubUrl}</a>
+  return <Layout><h2>{title}</h2>
+    <h4>{tagLine}</h4>
+    <a href={githubUrl}>{githubUrl}</a>
 
     <RichTextWrapper richText={description} />
   </Layout>;

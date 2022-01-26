@@ -7,11 +7,11 @@ function WorkExperience({ project }) {
     return <div className={styles.projectCard}>
         <Link href={`/portfolio/${project?.fields?.slug ? project?.fields?.slug : null}`} passHref={true}>
             <div>
-                <p>{tags}</p>
-                <h3>
+                <h5>{tags}</h5>
+                <h2>
                     {title}
-                </h3>
-                <h5>{tagLine}</h5>
+                </h2>
+                <h4>{tagLine}</h4>
             </div>
         </Link>
     </div>
