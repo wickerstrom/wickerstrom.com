@@ -5,3 +5,9 @@
 .acknowledgement {
     margin: 0rem 4rem 4rem 4rem;
 }
+
+@media (max-width: 600px) {
+    .acknowledgement {
+        margin: 0rem 1rem 2rem 1rem;
+    }
+}
