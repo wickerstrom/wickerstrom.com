@@ -50,24 +50,24 @@ function Resume(props) {
                     </div>
                 ))}
             </div>
-            <h1>Education</h1>
             <div>
+                <h1>Education</h1>
                 {education && education.length > 0 && sortItemsByMostRecent(education).map(education => (
                     <div key={education.sys.id}>
                         <Education education={education} />
                     </div>
                 ))}
             </div>
-            <h1>Skills</h1>
             <div>
+                <h1>Skills</h1>
                 {skills && skills.length > 0 && skills.map(skill => (
                     <div key={skill.sys.id}>
                         <Skills skills={skill} />
                     </div>
                 ))}
             </div>
-            <h1>Certificates</h1>
             <div>
+                <h1>Certificates</h1>
                 {certificates && certificates.length > 0 && sortItemsByMostRecent(certificates).map(certificate => (
                     <div key={certificate.sys.id}>
                         <Certificates certificate={certificate} />
