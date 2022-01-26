@@ -4,6 +4,7 @@ import Education from './Education'
 import Skills from './Skills'
 import Certificates from './Certificates'
 import { ContentfulClient, revalidateValue } from '../../config/config'
+import styles from '../../styles/resume.module.css'
 
 export async function getStaticProps() {
     const [workExperience, education, skills, certificates] = await Promise.all([
@@ -58,8 +59,9 @@ function Resume(props) {
                     </div>
                 ))}
             </div>
-            <div>
-                <h1>Skills</h1>
+            <h1>Skills</h1>
+
+            <div className={styles.skillsWrapper}>
                 {skills && skills.length > 0 && skills.map(skill => (
                     <div key={skill.sys.id}>
                         <Skills skills={skill} />
