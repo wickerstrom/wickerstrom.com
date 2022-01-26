@@ -7,7 +7,7 @@ import styles from '../../styles/about.module.css'
 
 export async function getStaticProps() {
 
-  const [pageContent, acknowledgements, skills, certificates] = await Promise.all([
+  const [pageContent, acknowledgements] = await Promise.all([
     ContentfulClient.getEntries({ content_type: 'pageContent' }),
     ContentfulClient.getEntries({ content_type: 'acknowledgements' }),
   ]);

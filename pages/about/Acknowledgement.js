@@ -1,11 +1,12 @@
 import RichTextWrapper from "../../components/common/RichTextWrapper";
+import styles from '../../styles/about.module.css'
 
 function Acknowledgement({ acknowledgement }) {
     const { title, role, company, acknowledgementText } = acknowledgement?.fields || {};
 
-    return <div>
+    return <div className={styles.acknowledgement}>
         <RichTextWrapper richText={acknowledgementText ? acknowledgementText : null} />
-        <h5>{title} - {role} at {company}</h5>
+        <h4>{title} - {role} at {company}</h4>
     </div>
 }
 
