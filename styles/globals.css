@@ -33,28 +33,63 @@ main {
 }
 
 @keyframes fadeIn {
-  from {transform: translateY(35px); opacity: 0;}
-  to { transform: translateY(0); opacity: 1;}
+  from {
+    transform: translateY(35px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @-moz-keyframes fadeIn {
-  from {transform: translateY(35px); opacity: 0;}
-  to { transform: translateY(0); opacity: 1;}
+  from {
+    transform: translateY(35px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes fadeIn {
-  from {transform: translateY(35px); opacity: 0;}
-  to { transform: translateY(0); opacity: 1;}
+  from {
+    transform: translateY(35px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @-o-keyframes fadeIn {
-  from {transform: translateY(35px); opacity: 0;}
-  to { transform: translateY(0); opacity: 1;}
+  from {
+    transform: translateY(35px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @-ms-keyframes fadeIn {
-  from {transform: translateY(35px); opacity: 0;}
-  to { transform: translateY(0); opacity: 1;}
+  from {
+    transform: translateY(35px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 a {
@@ -72,4 +107,10 @@ a :visited {
   align-items: center;
   text-align: center;
   margin-top: 4rem;
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 0rem;
+  }
 }

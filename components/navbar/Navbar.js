@@ -41,7 +41,7 @@ function Navbar() {
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
-    isMobile = windowDimension <= 600;
+    isMobile = windowDimension <= 840;
 
     return <div>
         {!isMobile ? (
