@@ -111,6 +111,6 @@ a :visited {
 
 @media (max-width: 600px) {
   main {
-    padding: 0rem;
+    padding: 0rem 1rem 0rem 1rem;
   }
 }
