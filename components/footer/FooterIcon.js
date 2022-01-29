@@ -1,11 +1,20 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Image from 'next/image'
+import styles from '../../styles/footer.module.css'
 
 function FooterIcon(props) {
-    const { icon, size, url } = props;
+    const { src, url } = props;
+
+    console.log(src);
+    console.log(url);
 
     return <div>
         <a href={url}>
-            <FontAwesomeIcon icon={icon} size={size} />
+            <Image
+                src={src}
+                className={styles.footerIconImg}
+                width={35}
+                height={35}
+            />
         </a>
     </div>
 }

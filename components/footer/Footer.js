@@ -1,23 +1,19 @@
 import styles from '../../styles/footer.module.css'
 import FooterIcon from './FooterIcon'
-
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import GitHub from './img/github.png';
+import LinkedIn from './img/linkedin.png';
+import Mail from './img/mail.png';
 
 const footerConfig = [{
-  'icon': faGithub,
-  'size': '2x',
+  'src': GitHub,
   'url': 'https://github.com/wickerstrom'
 },
 {
-  'icon': faLinkedin,
-  'size': '2x',
+  'src': LinkedIn,
   'url': 'https://www.linkedin.com/in/christian-wickerstr%C3%B6m-973a53b0/'
 },
 {
-  'icon': faEnvelope,
-  'size': '2x',
+  'src': Mail,
   'url': 'mailto:christian@wickerstrom.com'
 },
 ]
@@ -31,7 +27,7 @@ function Footer() {
 
     <div className={styles.footerIconsWrapper}>
       {footerConfig.map((footerIcon, index) => (
-        <div key={index} className={styles.footerIcon}><FooterIcon key={index} icon={footerIcon.icon} size={footerIcon.size} url={footerIcon.url} /></div>
+        <div key={index} className={styles.footerIcon}><FooterIcon key={index} src={footerIcon.src} url={footerIcon.url} /></div>
       ))}
     </div>
 
