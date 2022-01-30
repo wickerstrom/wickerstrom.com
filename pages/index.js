@@ -22,7 +22,24 @@ export default function Home({ content }) {
     <div>
       <Head>
         <title>Christian Wickerström</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        {/* Global Site Tag (gtag.js) - Google Analytics */}
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS_TAG}`}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.GOOGLE_ANALYTICS_TAG}', {
+              page_path: window.location.pathname,
+            });
+          `,
+          }}
+        />
       </Head>
       <Layout>
         <div className="centeredContentWrapper">
