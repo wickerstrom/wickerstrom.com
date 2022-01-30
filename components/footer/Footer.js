@@ -6,15 +6,18 @@ import Mail from './img/mail.png';
 
 const footerConfig = [{
   'src': GitHub,
-  'url': 'https://github.com/wickerstrom'
+  'url': 'https://github.com/wickerstrom',
+  'alt': 'Github Logo'
 },
 {
   'src': LinkedIn,
-  'url': 'https://www.linkedin.com/in/christian-wickerstr%C3%B6m-973a53b0/'
+  'url': 'https://www.linkedin.com/in/christian-wickerstr%C3%B6m-973a53b0/',
+  'alt': 'Linkedin Logo'
 },
 {
   'src': Mail,
-  'url': 'mailto:christian@wickerstrom.com'
+  'url': 'mailto:christian@wickerstrom.com',
+  'alt': 'Email Logo'
 },
 ]
 
@@ -27,7 +30,7 @@ function Footer() {
 
     <div className={styles.footerIconsWrapper}>
       {footerConfig.map((footerIcon, index) => (
-        <div key={index} className={styles.footerIcon}><FooterIcon key={index} src={footerIcon.src} url={footerIcon.url} /></div>
+        <div key={index} className={styles.footerIcon}><FooterIcon key={index} src={footerIcon.src} url={footerIcon.url} alt={footerIcon.alt}/></div>
       ))}
     </div>
 

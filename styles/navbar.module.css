@@ -49,7 +49,7 @@ a.underLine:hover:before {
 
 .mobileDrawerWrapper {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 }
 
 .cross {
@@ -101,7 +101,7 @@ a.underLine:hover:before {
     height: 3rem;
     padding: 1rem;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 }
 
 .mobileNavLinks {
@@ -111,6 +111,6 @@ a.underLine:hover:before {
 
 .mobileDrawerNavBar {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     padding: 0.5rem;
 }
