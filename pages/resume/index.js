@@ -30,15 +30,21 @@ function Resume(props) {
     const { workExperience, education, skills, certificates } = props;
 
     const sortItemsByMostRecent = (itemsArray) => {
-        let sortItemsByMostRecent = [];
+        let sortedItems = [];
 
         if (itemsArray && itemsArray.length > 0) {
-            return sortItemsByMostRecent = itemsArray.sort((a, b) => {
+            return sortedItems = itemsArray.sort((a, b) => {
                 return new Date(a.fields.startDate).getTime() -
                     new Date(b.fields.startDate).getTime()
             }).reverse();
         }
-        return sortItemsByMostRecent;
+        return sortedItems;
+    }
+
+    const sortByAlphabeticalOrder = (itemsArray) => {
+        if (itemsArray && itemsArray.length > 0) {
+            return itemsArray.sort((a, b) => a.fields.title.localeCompare(b.fields.title))
+        }
     }
 
     return (
@@ -61,9 +67,8 @@ function Resume(props) {
                     ))}
                 </div>
                 <h1>Skills</h1>
-
                 <div className={styles.skillsWrapper}>
-                    {skills && skills.length > 0 && skills.map(skill => (
+                    {skills && skills.length > 0 && sortByAlphabeticalOrder(skills).map(skill => (
                         <div key={skill.sys.id}>
                             <Skills skills={skill} />
                         </div>
