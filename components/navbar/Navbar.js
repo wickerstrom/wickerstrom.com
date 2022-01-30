@@ -4,6 +4,7 @@ import styles from '../../styles/navbar.module.css'
 import React, { useEffect, useState } from "react";
 import MobileDrawer from './MobileDrawer';
 import ActiveLink from './ActiveLink'
+import useResizer from "./windowResizer";
 
 const navbarConfig = [
     {
@@ -25,23 +26,7 @@ const navbarConfig = [
     }]
 
 function Navbar() {
-    let isMobile = false;
-    const [windowDimension, setWindowDimension] = useState(null);
-
-    useEffect(() => {
-        setWindowDimension(window.innerWidth);
-    }, []);
-
-    useEffect(() => {
-        function handleResize() {
-            setWindowDimension(window.innerWidth);
-        }
-
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
-
-    isMobile = windowDimension <= 840;
+    const isMobile = useResizer();
 
     return <div>
         {!isMobile ? (
