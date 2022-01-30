@@ -1,10 +1,10 @@
 
 import NavLink from 'next/link';
 import styles from '../../styles/navbar.module.css'
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import MobileDrawer from './MobileDrawer';
 import ActiveLink from './ActiveLink'
-import useResizer from "./windowResizer";
+import useResizer from "../../hooks/windowResizer";
 
 const navbarConfig = [
     {
@@ -26,7 +26,12 @@ const navbarConfig = [
     }]
 
 function Navbar() {
-    const isMobile = useResizer();
+    const { isMobile, handleSizeChange } = useResizer();
+
+    useEffect(() => {
+        handleSizeChange();
+      }, []);
+
 
     return <div>
         {!isMobile ? (
