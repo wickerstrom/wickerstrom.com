@@ -57,13 +57,27 @@ a.underLine:hover:before {
 }
 
 .activeMobileWrapper {
-    background-color: black;
     color: white;
     z-index: 10000;
-    height: 100%;
-    width: 100%;
     position: absolute;
+    right: -1000px;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    -webkit-animation: slide 0.5s forwards;
+    animation: slide 0.5s forwards;
+    animation-timing-function: ease-out;
 }
+
+
+@-webkit-keyframes slide {
+    100% { right: 0; }
+}
+
+@keyframes slide {
+    100% { right: 0; }
+}
+
 
 .activeMobileWrapper a {
     color: white;
