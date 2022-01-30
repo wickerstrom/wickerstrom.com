@@ -18,7 +18,6 @@ const navbarConfig = [
     {
         'link': '/about',
         'label': 'About',
-
     },
     {
         'link': '/contact',

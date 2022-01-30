@@ -97,11 +97,15 @@ a.underLine:hover:before {
     padding: 0.5rem;
 }
 
-.mobileDrawerIcon {
+.mobileDrawerIconWrapper {
     height: 3rem;
     padding: 1rem;
     display: flex;
     justify-content: flex-end;
+}
+
+.mobileDrawerIcon {
+    cursor: pointer;
 }
 
 .mobileNavLinks {

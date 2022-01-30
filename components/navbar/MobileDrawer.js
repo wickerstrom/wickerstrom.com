@@ -11,16 +11,21 @@ function MobileDrawer(props) {
 
     return <div className={styles.mobileDrawerWrapper}>
 
-        <div className={styles.mobileDrawerIcon}>
-            <FontAwesomeIcon icon={faBars} size={'2x'} onClick={() => setIsActive(!isActive)} />
+        <div className={styles.mobileDrawerIconWrapper}>
+            <FontAwesomeIcon className={styles.mobileDrawerIcon} icon={faBars} size={'2x'} onClick={() => setIsActive(!isActive)} />
         </div>
         {isActive &&
             <div className={styles.activeMobileWrapper}>
-                <div className={styles.mobileDrawerIcon}>
-                    <FontAwesomeIcon icon={faTimes} size={'2x'} onClick={() => setIsActive(!isActive)} />
+                <div className={styles.mobileDrawerIconWrapper}>
+                    <FontAwesomeIcon className={styles.mobileDrawerIcon} icon={faTimes} size={'2x'} onClick={() => setIsActive(!isActive)} />
                 </div>
                 <div className={styles.mobileNavLinks}>
                     <ul>
+                        <li>
+                            <NavLink onClick={() => setIsActive(!isActive)} href={'/'}>
+                                <a>Home</a>
+                            </NavLink>
+                        </li>
                         {navbarConfig.map((navBarItem, index) => (
                             <li key={index}>
                                 <NavLink onClick={() => setIsActive(!isActive)} href={navBarItem.link}>
