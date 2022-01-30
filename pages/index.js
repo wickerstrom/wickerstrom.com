@@ -27,7 +27,8 @@ export default function Home({ content }) {
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <meta charset="UTF-8" />
           <meta name="keywords" content="Christian, Wickerström, Christian Wickerström, UX Designer, Developer, Gothenburg" />
-          <meta name="description" content="Christian Wickerström - website" />
+          <meta name="description" content="Christian Wickerström" />
+          
 
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
