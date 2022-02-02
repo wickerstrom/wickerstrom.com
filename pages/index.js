@@ -20,24 +20,16 @@ export default function Home({ content }) {
 
   return (
     <html lang="en">
-      <div>
-
-        <Head>
-          <title>Christian Wickerström</title>
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <meta charset="UTF-8" />
-          <meta name="keywords" content="Christian, Wickerström, Christian Wickerström, UX Designer, Developer, Gothenburg" />
-          <meta name="description" content="Christian Wickerström" />
-          
-
-          {/* Global Site Tag (gtag.js) - Google Analytics */}
-          <script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS_TAG}`}
-          />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: ` 
+      <Head>
+        <title>Christian Wickerström</title>
+        {/* Global Site Tag (gtag.js) - Google Analytics */}
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS_TAG}`}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: ` 
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
@@ -45,15 +37,14 @@ export default function Home({ content }) {
               page_path: window.location.pathname,
             });
           `,
-            }}
-          />
-        </Head>
-        <Layout>
-          <div className="centeredContentWrapper">
-            <RichTextWrapper richText={contentText} />
-          </div>
-        </Layout>
-      </div>
+          }}
+        />
+      </Head>
+      <Layout>
+        <div className="centeredContentWrapper">
+          <RichTextWrapper richText={contentText} />
+        </div>
+      </Layout>
     </html>
   )
 }
