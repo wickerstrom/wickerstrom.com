@@ -17,25 +17,23 @@
     transition: 0.25s;
 }
 
-.active {
-    text-decoration: underline;
-}
+
 
 a.home {
-    cursor:pointer;
+    cursor: pointer;
 }
 
 a.underLine {
     position: relative;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 a.underLine:before {
     content: "";
     position: absolute;
     width: 0;
-    height: 2px;
-    bottom: 0;
+    height: 1px;
+    bottom: 3px;
     left: 0;
     background-color: grey;
     visibility: hidden;
@@ -65,18 +63,34 @@ a.underLine:hover:before {
     width: 100%;
     background-color: black;
     z-index: 1;
-    -webkit-animation: slide 0.5s forwards;
-    animation: slide 0.5s forwards;
+    -webkit-animation: slide 0.3s forwards;
+    animation: slide 0.3s forwards;
     animation-timing-function: ease-out;
 }
 
 
 @-webkit-keyframes slide {
-    100% { right: 0; }
+    0% {
+        right: -1000px;
+        opacity: 0;
+    }
+
+    100% {
+        right: 0;
+        opacity: 1;
+    }
 }
 
 @keyframes slide {
-    100% { right: 0; }
+    0% {
+        right: -1000px;
+        opacity: 0;
+    }
+
+    100% {
+        right: 0;
+        opacity: 1;
+    }
 }
 
 

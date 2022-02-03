@@ -47,7 +47,8 @@ function Navbar() {
                 <div>
                     <style jsx>{`
                     .active {
-                        font-weight: bold;
+                        text-decoration: underline;
+                        pointer-events: none;
                     }
                     `}</style>
                     {navbarConfig.map((navBarItem, index) => (

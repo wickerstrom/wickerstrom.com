@@ -22,6 +22,7 @@ export default function Home({ content }) {
     <html lang="en">
       <Head>
         <title>Christian Wickerström</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         {/* Global Site Tag (gtag.js) - Google Analytics */}
         <script
           async
