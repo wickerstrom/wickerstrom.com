@@ -4,6 +4,7 @@ import RichTextWrapper from '../components/common/RichTextWrapper'
 import { ContentfulClient, revalidateValue } from '../config/config'
 import { filterPageContentByPageTitle } from '../utils/utils';
 
+
 export async function getStaticProps() {
   const res = await ContentfulClient.getEntries({ content_type: 'pageContent' })
 
@@ -17,6 +18,7 @@ export async function getStaticProps() {
 
 export default function Home({ content }) {
   const { contentText } = filterPageContentByPageTitle(content, 'LandingPage')[0].fields;
+
 
   return (
     <html lang="en">
@@ -42,7 +44,7 @@ export default function Home({ content }) {
         />
       </Head>
 
-      
+
       <Layout>
         <div className="centeredContentWrapper">
           <RichTextWrapper richText={contentText} />
