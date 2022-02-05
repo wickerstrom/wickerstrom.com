@@ -41,6 +41,8 @@ export default function Home({ content }) {
           }}
         />
       </Head>
+
+      
       <Layout>
         <div className="centeredContentWrapper">
           <RichTextWrapper richText={contentText} />
