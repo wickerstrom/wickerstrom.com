@@ -10,13 +10,17 @@ function MyApp({ Component, pageProps, router }) {
   }, [])
 
   return (
-    <Layout>
+    <>
+      <Head>
+        <title>Christian Wickerström</title>
+      </Head>
+      <Layout>
         <Component
           key={router.route}
           {...pageProps}
         />
-    </Layout>
-
+      </Layout>
+    </>
   )
 }
 

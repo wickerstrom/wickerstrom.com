@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import RichTextWrapper from '../components/common/RichTextWrapper'
 import { ContentfulClient, revalidateValue } from '../config/config'
 import { filterPageContentByPageTitle } from '../utils/utils';
