@@ -1,6 +1,6 @@
-import Layout from '../../components/layout/Layout'
 import RichTextWrapper from "../../components/common/RichTextWrapper";
 import { ContentfulClient } from '../../config/config'
+import PageWrapperHoc from '../../components/common/PageWrapperHoc'
 
 export async function getServerSideProps(context) {
   const { id } = context.query;
@@ -18,10 +18,13 @@ export default function Project({ project }) {
 
   const { title, tagLine, description, githubUrl } = project.fields;
 
-  return <Layout><h2>{title}</h2>
-    <h4>{tagLine}</h4>
-    <a href={githubUrl}>{githubUrl}</a>
+  return (
+    <PageWrapperHoc>
+      <h2>{title}</h2>
+      <h4>{tagLine}</h4>
+      <a href={githubUrl}>{githubUrl}</a>
 
-    <RichTextWrapper richText={description} />
-  </Layout>;
+      <RichTextWrapper richText={description} />
+    </PageWrapperHoc>
+  )
 }

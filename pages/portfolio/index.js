@@ -1,7 +1,7 @@
-import Layout from '../../components/layout/Layout'
 import { ContentfulClient, revalidateValue } from '../../config/config'
 import ProjectCard from './ProjectCard'
 import styles from '../../styles/portfolio.module.css'
+import PageWrapperHoc from '../../components/common/PageWrapperHoc'
 
 export async function getStaticProps() {
   const res = await ContentfulClient.getEntries({ content_type: 'project' })
@@ -15,15 +15,15 @@ export async function getStaticProps() {
 }
 
 function Projects({ projects }) {
-
-  return <Layout>
-    {projects.length === 0 && <div>Whoops, there are no projects here...</div>}
+  return (
+    <PageWrapperHoc>
+      {projects.length === 0 && <div>Whoops, there are no projects here...</div>}
       {projects && projects.length > 0 && projects.map(project => (
         <div className={styles.projectCardWrapper} key={project.sys.id}>
           <ProjectCard project={project} />
         </div>
       ))}
-  </Layout>
+    </PageWrapperHoc>)
 }
 
 export default Projects

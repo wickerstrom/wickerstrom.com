@@ -3,9 +3,11 @@ import Footer from '../footer/Footer'
 
 export default function Layout({ children }) {
   return (
-    <div className="layoutWrapper">
+    <div>
       <Navbar />
-        <main>{children}</main>
+      <main>
+        {children}
+      </main>
       <Footer />
     </div>
   )
