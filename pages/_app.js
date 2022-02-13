@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import { hotjar } from 'react-hotjar'
 import Layout from '../components/layout/Layout'
 import { AnimatePresence } from "framer-motion"
+import Head from 'next/head';
 
 function MyApp({ Component, pageProps, router }) {
   useEffect(() => {
