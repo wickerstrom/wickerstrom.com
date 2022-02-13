@@ -1,10 +1,10 @@
-import Layout from '../../components/layout/Layout'
 import WorkExperience from './WorkExperience'
 import Education from './Education'
 import Skills from './Skills'
 import Certificates from './Certificates'
 import { ContentfulClient, revalidateValue } from '../../config/config'
 import styles from '../../styles/resume.module.css'
+import PageWrapperHoc from '../../components/common/PageWrapperHoc'
 
 export async function getStaticProps() {
     const [workExperience, education, skills, certificates] = await Promise.all([
@@ -48,16 +48,16 @@ function Resume(props) {
     }
 
     return (
-        <Layout>
+        <PageWrapperHoc>
             <div className={styles.resumeWrapper}>
                 <div>
-                    <h1>Experience</h1>
                     {workExperience && workExperience.length > 0 && sortItemsByMostRecent(workExperience).map(workExperience => (
                         <div key={workExperience.sys.id}>
                             <WorkExperience workExperience={workExperience} />
                         </div>
                     ))}
                 </div>
+
                 <div>
                     <h1>Education</h1>
                     {education && education.length > 0 && sortItemsByMostRecent(education).map(education => (
@@ -83,7 +83,8 @@ function Resume(props) {
                     ))}
                 </div>
             </div>
-        </Layout>)
+        </PageWrapperHoc>
+    )
 }
 
 export default Resume
