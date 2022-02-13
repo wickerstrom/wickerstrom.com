@@ -9,7 +9,10 @@ class MyDocument extends Document {
                     <meta charset="UTF-8" />
                     <meta name="keywords" content="Christian, Wickerström, Christian Wickerström, UX Designer, Developer, Gothenburg" />
                     <meta name="description" content="Christian Wickerström" />
+                    <title>Christian Wickerström</title>
+
                     {/* Global Site Tag (gtag.js) - Google Analytics */}
+
                     <script
                         async
                         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS_TAG}`}
