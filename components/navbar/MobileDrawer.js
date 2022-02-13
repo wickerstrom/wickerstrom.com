@@ -22,17 +22,21 @@ function MobileDrawer(props) {
                 <div className={styles.mobileNavLinks}>
                     <ul>
                         <li>
-                            <NavLink onClick={() => setIsActive(!isActive)} href={'/'}>
-                                <a>Home</a>
-                            </NavLink>
+                            <div onClick={() => setIsActive(false)}>
+                                <NavLink href={'/'}>
+                                    <a>Home</a>
+                                </NavLink>
+                            </div>
                         </li>
                         {navbarConfig.map((navBarItem, index) => (
                             <li key={index}>
-                                <NavLink onClick={() => setIsActive(!isActive)} href={navBarItem.link}>
-                                    <a>
-                                        {navBarItem.label}
-                                    </a>
-                                </NavLink>
+                                <div onClick={() => setIsActive(false)}>
+                                    <NavLink href={navBarItem.link}>
+                                        <a>
+                                            {navBarItem.label}
+                                        </a>
+                                    </NavLink>
+                                </div>
                             </li>
                         ))}
                     </ul>
