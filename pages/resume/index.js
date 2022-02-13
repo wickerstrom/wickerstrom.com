@@ -51,6 +51,7 @@ function Resume(props) {
         <PageWrapperHoc>
             <div className={styles.resumeWrapper}>
                 <div>
+                    <h1>Experience</h1>
                     {workExperience && workExperience.length > 0 && sortItemsByMostRecent(workExperience).map(workExperience => (
                         <div key={workExperience.sys.id}>
                             <WorkExperience workExperience={workExperience} />
