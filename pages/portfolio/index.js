@@ -17,7 +17,7 @@ export async function getStaticProps() {
 function Projects({ projects }) {
   return (
     <PageWrapperHoc>
-      {projects.length === 0 && <div>Whoops, there are no projects here...</div>}
+      {projects.length === 0 && <div style={{ textAlign: 'center' }}>Whoops, there are no projects here...</div>}
       {projects && projects.length > 0 && projects.map(project => (
         <div className={styles.projectCardWrapper} key={project.sys.id}>
           <ProjectCard project={project} />
