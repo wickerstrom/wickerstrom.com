@@ -6,7 +6,7 @@ import { ContentfulClient, revalidateValue } from '../../config/config'
 import styles from '../../styles/resume.module.css'
 import PageWrapperHoc from '../../components/common/PageWrapperHoc'
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const [workExperience, education, skills, certificates] = await Promise.all([
         ContentfulClient.getEntries({ content_type: 'workExperience' }),
         ContentfulClient.getEntries({ content_type: 'education' }),
